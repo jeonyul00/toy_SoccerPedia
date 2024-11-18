@@ -34,14 +34,61 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="YtS-6F-opY" id="a08-BC-Yqf"/>
+                        <segue destination="PPh-m4-1Wc" kind="presentation" identifier="detailSegue" id="FEm-c5-ZMt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="24.647887323943664"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Zyx-4Q-670">
+            <objects>
+                <viewController id="PPh-m4-1Wc" customClass="DetailViewController" customModule="SoccerPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oh2-hW-VKO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS2-We-LU0">
+                                <rect key="frame" x="16" y="19.999999999999996" width="361" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gdm-iq-7Cq">
+                                <rect key="frame" x="0.0" y="76.666666666666686" width="393" height="765.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="syV-ym-RJh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="syV-ym-RJh" firstAttribute="bottom" secondItem="gdm-iq-7Cq" secondAttribute="bottom" id="3vN-xY-o0v"/>
+                            <constraint firstItem="KS2-We-LU0" firstAttribute="top" secondItem="syV-ym-RJh" secondAttribute="top" constant="20" id="A4w-dI-eho"/>
+                            <constraint firstItem="syV-ym-RJh" firstAttribute="trailing" secondItem="gdm-iq-7Cq" secondAttribute="trailing" id="CpV-TF-c4T"/>
+                            <constraint firstItem="KS2-We-LU0" firstAttribute="leading" secondItem="syV-ym-RJh" secondAttribute="leading" constant="16" id="M7j-NU-sZe"/>
+                            <constraint firstItem="gdm-iq-7Cq" firstAttribute="leading" secondItem="syV-ym-RJh" secondAttribute="leading" id="PBV-ST-Mb4"/>
+                            <constraint firstItem="syV-ym-RJh" firstAttribute="trailing" secondItem="KS2-We-LU0" secondAttribute="trailing" constant="16" id="PEV-vw-8S8"/>
+                            <constraint firstItem="gdm-iq-7Cq" firstAttribute="top" secondItem="KS2-We-LU0" secondAttribute="bottom" constant="16" id="eti-e2-t0Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="gdm-iq-7Cq" id="GjE-0Q-JJR"/>
+                        <outlet property="teamLabel" destination="KS2-We-LU0" id="x9T-ga-swL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIK-WW-mBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="25"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
